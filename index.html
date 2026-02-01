@@ -157,11 +157,13 @@
                 margin-bottom: 5px;
             }
             .features {
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
                 margin-top: 15px;
             }
             .feature {
-                margin: 5px 0;
+                margin: 0;
                 min-width: auto;
             }
             .feature i {
@@ -171,15 +173,16 @@
             .buttons {
                 margin-top: 20px;
                 display: flex;
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
             }
             button {
                 padding: 12px 20px;
                 font-size: 1rem;
-                width: 100%;
-                max-width: 250px;
-                margin: 5px 0;
+                width: auto;
+                max-width: 150px;
+                margin: 0;
             }
             footer {
                 margin-top: 20px;
@@ -200,12 +203,12 @@
             <p>Full access includes downloadable files, reports, and insights tailored for professionals.</p>
             <div class="features">
                 <div class="feature">
-                    <i class="fas fa-chart-line"></i>
-                    <p>Advanced Analytics</p>
-                </div>
-                <div class="feature">
                     <i class="fas fa-shield-alt"></i>
                     <p>Secure & Verified</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <p>Advanced Analytics</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-download"></i>
@@ -215,8 +218,8 @@
         </div>
         
         <div class="buttons">
-            <button onclick="window.location.href='payment.html'">Pay ₹49 to Unlock Dashboard</button>
             <button class="login-btn" onclick="window.location.href='login.html'">Login (Existing Member)</button>
+            <button onclick="window.location.href='payment.html'">Pay ₹49 to Unlock Dashboard</button>
         </div>
         
         <footer>
