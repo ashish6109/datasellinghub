@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Selling Hub - Premium Access</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 1.2s ease-in;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #4a4a4a;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .locked {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            animation: slideIn 0.8s ease-out;
+        }
+        .locked::before {
+            content: "🔒";
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .locked h2 {
+            margin: 0 0 15px 0;
+            font-size: 1.8rem;
+        }
+        .locked p {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .feature {
+            text-align: center;
+            margin: 10px;
+            flex: 1;
+            min-width: 150px;
+        }
+        .feature i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        button {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .login-btn {
+            background: #5a6268;
+            color: white;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            .features {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Selling Hub</h1>
+        <p class="subtitle">Unlock Premium Datasets for Just ₹49</p>
+        
+        <div class="locked">
+            <h2>Exclusive Locked Content</h2>
+            <p>Preview: Discover top-tier datasets on market trends, analytics, and more. Pay once, access forever!</p>
+            <p>Full access includes downloadable files, reports, and insights tailored for professionals.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <p>Advanced Analytics</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Secure & Verified</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-download"></i>
+                    <p>Instant Downloads</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button onclick="window.location.href='payment.html'">Pay ₹49 to Unlock Dashboard</button>
+            <button class="login-btn" onclick="window.location.href='login.html'">Login (Existing Member)</button>
+        </div>
+        
+        <footer>
+            Secure payments powered by Razorpay. All rights reserved © 2023.
+        </footer>
+    </div>
+</body>
+</html>
