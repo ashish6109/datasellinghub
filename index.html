@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* NO CHANGES IN CSS */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -112,41 +111,120 @@
             border-top: 1px solid #eee;
             padding-top: 20px;
         }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        /* Mobile-specific adjustments to fit without scrolling */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+                justify-content: flex-start;
+                min-height: auto;
+            }
+            .container {
+                padding: 20px;
+                margin: 10px;
+                border-radius: 10px;
+                max-width: 100%;
+            }
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 5px;
+            }
+            .subtitle {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+            .locked {
+                padding: 20px;
+                margin: 15px 0;
+            }
+            .locked::before {
+                font-size: 2.5rem;
+                margin-bottom: 5px;
+            }
+            .locked h2 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+            .locked p {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+            }
+            .features {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 10px;
+                margin-top: 15px;
+            }
+            .feature {
+                margin: 0;
+                min-width: auto;
+            }
+            .feature i {
+                font-size: 1.5rem;
+                margin-bottom: 5px;
+            }
+            .buttons {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+            }
+            button {
+                padding: 12px 20px;
+                font-size: 1rem;
+                width: auto;
+                max-width: 150px;
+                margin: 0;
+            }
+            footer {
+                margin-top: 20px;
+                font-size: 0.8rem;
+                padding-top: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Data Selling Hub</h1>
-        <p class="subtitle">Buy Membership & Earn by Selling Data</p>
+        <p class="subtitle">Unlock Premium Datasets for Just ₹49</p>
         
         <div class="locked">
-            <h2>Member-Only Access</h2>
-            <p>This platform allows only registered members to sell data and earn income.</p>
-            <p>Purchase membership once to unlock lifetime access to upload and sell approved data.</p>
+            <h2>Exclusive Locked Content</h2>
+            <p>Preview: Discover top-tier datasets on market trends, analytics, and more. Pay once, access forever!</p>
+            <p>Full access includes downloadable files, reports, and insights tailored for professionals.</p>
             <div class="features">
                 <div class="feature">
                     <i class="fas fa-shield-alt"></i>
-                    <p>Verified Members</p>
+                    <p>Secure & Verified</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-chart-line"></i>
-                    <p>Earn Income</p>
+                    <p>Advanced Analytics</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-download"></i>
-                    <p>Sell Securely</p>
+                    <p>Instant Downloads</p>
                 </div>
             </div>
         </div>
         
         <div class="buttons">
-             <button onclick="window.location.href='payment.html'">Buy Membership ₹49</button>
-            <button class="login-btn" onclick="window.location.href='login.html'">Member Login</button>
+             <button onclick="window.location.href='payment.html'">Pay</button>
+            <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
         </div>
         
         <footer>
-            Membership required to sell data. Secure payments only. © 2025.
+            Secure payments powered by Gocreator. All rights reserved © 2025.
         </footer>
     </div>
 </body>
-</html>
+</html> 
