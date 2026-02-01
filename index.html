@@ -119,75 +119,77 @@
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-        /* Mobile-specific adjustments to fit without scrolling */
+
+        /* ===== MOBILE VERSION : NO SCROLL ===== */
         @media (max-width: 600px) {
             body {
-                padding: 10px;
+                padding: 8px;
                 justify-content: flex-start;
-                min-height: auto;
+                min-height: 100vh;
             }
             .container {
-                padding: 20px;
-                margin: 10px;
+                padding: 16px;
+                margin: 8px;
                 border-radius: 10px;
                 max-width: 100%;
             }
             h1 {
-                font-size: 1.8rem;
-                margin-bottom: 5px;
+                font-size: 1.6rem;
+                margin-bottom: 4px;
             }
             .subtitle {
-                font-size: 1rem;
-                margin-bottom: 15px;
-            }
-            .locked {
-                padding: 20px;
-                margin: 15px 0;
-            }
-            .locked::before {
-                font-size: 2.5rem;
-                margin-bottom: 5px;
-            }
-            .locked h2 {
-                font-size: 1.5rem;
+                font-size: 0.95rem;
                 margin-bottom: 10px;
             }
+            .locked {
+                padding: 16px;
+                margin: 10px 0;
+            }
+            .locked::before {
+                font-size: 2.2rem;
+                margin-bottom: 4px;
+            }
+            .locked h2 {
+                font-size: 1.3rem;
+                margin-bottom: 6px;
+            }
             .locked p {
-                font-size: 0.9rem;
-                margin-bottom: 5px;
+                font-size: 0.85rem;
+                margin-bottom: 4px;
+                line-height: 1.2;
             }
             .features {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 10px;
-                margin-top: 15px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 8px;
             }
             .feature {
                 margin: 0;
-                min-width: auto;
+                flex: 1;
             }
             .feature i {
-                font-size: 1.5rem;
-                margin-bottom: 5px;
+                font-size: 1.3rem;
+                margin-bottom: 2px;
+            }
+            .feature p {
+                font-size: 0.75rem;
             }
             .buttons {
-                margin-top: 20px;
+                margin-top: 12px;
                 display: flex;
-                flex-direction: row;
+                gap: 8px;
                 justify-content: center;
-                gap: 10px;
             }
             button {
-                padding: 12px 20px;
-                font-size: 1rem;
-                width: auto;
-                max-width: 150px;
+                padding: 10px 14px;
+                font-size: 0.9rem;
                 margin: 0;
+                max-width: 140px;
             }
             footer {
-                margin-top: 20px;
-                font-size: 0.8rem;
-                padding-top: 10px;
+                margin-top: 12px;
+                font-size: 0.7rem;
+                padding-top: 8px;
             }
         }
     </style>
@@ -195,35 +197,35 @@
 <body>
     <div class="container">
         <h1>Data Selling Hub</h1>
-        <p class="subtitle">Unlock Premium Datasets for Just ₹49</p>
+        <p class="subtitle">Buy Membership & Earn by Selling Data</p>
         
         <div class="locked">
-            <h2>Exclusive Locked Content</h2>
-            <p>Preview: Discover top-tier datasets on market trends, analytics, and more. Pay once, access forever!</p>
-            <p>Full access includes downloadable files, reports, and insights tailored for professionals.</p>
+            <h2>Member-Only Access</h2>
+            <p>This platform allows only registered members to sell data and earn income.</p>
+            <p>Purchase membership once to unlock lifetime access to upload and sell approved data.</p>
             <div class="features">
                 <div class="feature">
                     <i class="fas fa-shield-alt"></i>
-                    <p>Secure & Verified</p>
+                    <p>Verified Members</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-chart-line"></i>
-                    <p>Advanced Analytics</p>
+                    <p>Earn Income</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-download"></i>
-                    <p>Instant Downloads</p>
+                    <p>Sell Securely</p>
                 </div>
             </div>
         </div>
         
         <div class="buttons">
-             <button onclick="window.location.href='payment.html'">Pay</button>
-            <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+             <button onclick="window.location.href='payment.html'">Buy Membership ₹49</button>
+            <button class="login-btn" onclick="window.location.href='login.html'">Member Login</button>
         </div>
         
         <footer>
-            Secure payments powered by Gocreator. All rights reserved © 2025.
+            Membership required to sell data. Secure payments only. © 2025.
         </footer>
     </div>
 </body>
